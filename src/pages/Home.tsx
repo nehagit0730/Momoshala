@@ -39,7 +39,12 @@ const momoTypes = [
 ];
 
 export default function Home() {
-  const whatsappLink = "https://wa.me/916280167160?text=Hi%20Abhishek,%20I'm%20interested%20in%20ordering%20momos%20from%20Momoshala.";
+  const getWhatsAppLink = (momoName?: string) => {
+    const message = momoName 
+      ? `Hi Abhishek, I'd like to order ${momoName} from Momoshala.`
+      : "Hi Abhishek, I'm interested in ordering momos from Momoshala.";
+    return `https://wa.me/916280167160?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <div className="pt-16">
@@ -71,7 +76,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-8 h-14 text-lg">
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                     Order Now (WhatsApp)
                   </a>
                 </Button>
@@ -227,7 +232,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-2">{momo.name}</h3>
                 <p className="text-gray-600 text-sm mb-4">{momo.description}</p>
                 <Button asChild variant="outline" className="w-full rounded-full border-orange-200 text-orange-600 hover:bg-orange-50">
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <a href={getWhatsAppLink(momo.name)} target="_blank" rel="noopener noreferrer">
                     Buy Now
                   </a>
                 </Button>
@@ -245,7 +250,7 @@ export default function Home() {
             Join dozens of successful food business owners in Dharamshala who trust Momoshala for their daily supply.
           </p>
           <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-orange-50 rounded-full px-12 h-16 text-xl font-bold">
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
               Contact Abhishek Thapa
             </a>
           </Button>

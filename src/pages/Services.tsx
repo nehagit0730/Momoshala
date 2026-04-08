@@ -42,7 +42,10 @@ const services = [
 ];
 
 export default function Services() {
-  const whatsappLink = "https://wa.me/916280167160?text=Hi%20Abhishek,%20I'd%20like%20to%20inquire%20about%20your%20bulk%20momo%20services.";
+  const getWhatsAppLink = (momoName: string) => {
+    const message = `Hi Abhishek, I'd like to inquire about bulk ordering ${momoName} from Momoshala.`;
+    return `https://wa.me/916280167160?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <div className="pt-24 pb-24">
@@ -100,7 +103,7 @@ export default function Services() {
                 </ul>
                 <div className="pt-4">
                   <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-8">
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                    <a href={getWhatsAppLink(service.name)} target="_blank" rel="noopener noreferrer">
                       <ShoppingCart className="w-4 h-4 mr-2" />
                       Order Bulk {service.name}
                     </a>
