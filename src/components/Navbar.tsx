@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <img 
-                src="/logo.png" 
+                src="images/logo.png" 
                 alt="Momoshala Logo" 
                 className="h-12 w-12 object-contain"
               />

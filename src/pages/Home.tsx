@@ -47,7 +47,7 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-brand-cream">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero.jpg" 
+            src="/images/banner.jpg" 
             alt="Hero Background" 
             className="w-full h-full object-cover opacity-40"
             referrerPolicy="no-referrer"
