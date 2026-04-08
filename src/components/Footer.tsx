@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img src="/logo.png" alt="Momoshala Logo" className="h-8 w-8 object-contain brightness-0 invert" />
+              <img src="images/logo.png" alt="Momoshala Logo" className="h-8 w-8 object-contain brightness-0 invert" />
               <span className="text-2xl font-bold text-orange-500 tracking-tighter">
                 MOMO<span className="text-white">SHALA</span>
               </span>
