@@ -118,7 +118,7 @@ export default function Home() {
               className="relative"
             >
               <img 
-                src="https://picsum.photos/seed/aboutmomo/800/600" 
+                src="/images/about.jpg" 
                 alt="About Momoshala" 
                 className="rounded-3xl shadow-2xl"
                 referrerPolicy="no-referrer"

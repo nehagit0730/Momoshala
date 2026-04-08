@@ -28,7 +28,7 @@ export default function About() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            src="/images/hero.jpg" 
+            src="/images/kitchen.png" 
             alt="Our Kitchen" 
             className="rounded-3xl shadow-xl aspect-[4/3] object-cover"
             referrerPolicy="no-referrer"
@@ -38,7 +38,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            src="/images/veg.jpg" 
+            src="/images/preparation.jpg" 
             alt="Momo Preparation" 
             className="rounded-3xl shadow-xl aspect-[4/3] object-cover"
             referrerPolicy="no-referrer"
@@ -89,7 +89,7 @@ export default function About() {
             </div>
             <div className="relative">
               <img 
-                src="https://picsum.photos/seed/momoshala-founder/600/600" 
+                src="/images/momoshala-founder.jpeg" 
                 alt="Abhishek Thapa" 
                 className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto border-8 border-white shadow-2xl"
                 referrerPolicy="no-referrer"
